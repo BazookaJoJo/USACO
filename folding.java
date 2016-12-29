@@ -56,6 +56,7 @@ OUTPUT DETAILS:
 
 The valid folding positions are 1, 2, 3, and 8.
  */
+
 import java.util.Arrays;
 import java.util.Scanner;
 public class folding {
