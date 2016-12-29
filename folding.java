@@ -1,5 +1,5 @@
 /*
- * Rope Folding
+Rope Folding
 ============
 
 Farmer John has a long rope of length L (1 <= L <= 10,000) that he uses for
