@@ -60,6 +60,7 @@ The valid folding positions are 1, 2, 3, and 8.
 import java.util.Arrays;
 import java.util.Scanner;
 public class folding {
+	
 	//boolean to see if a sequence of numbers is a palindrome
 	//take the start and ending index and keep comparing the outer two numbers. increment a counter to get closer to the middle index.
 	//as soon as you find a mismatch, return false; otherwise return true
@@ -74,6 +75,7 @@ public class folding {
 	}
 	
 	public static void main(String[] args){
+		
 		//scanning in inputs and initializing variables
 		Scanner s = new Scanner(System.in);
 		int k = s.nextInt();
@@ -84,13 +86,16 @@ public class folding {
 		for(int i = 0; i<k; i++){
 			knots[i]=s.nextInt();
 		}
+		
 		//sorting the knot positions
 		Arrays.sort(knots);
+		
 		//calculating differences/gaps between each knot
 		int[] diffs = new int[k-1];
 		for(int i = 0; i<k-1; i++){
 			diffs[i]=knots[i+1]-knots[i];
 		}
+		
 		//if the suffix or prefix is a palindrome, then there will be a knot
 		//these are the prefixes
 		for(int i = 0; i<k-1; i++){ 
@@ -98,6 +103,7 @@ public class folding {
 				counter++; 
 			}
 		}
+		
 		//these are the suffixes
 		for(int i = 1; i<k-1; i++){
 			if(palindrome(i, k-2, diffs)){
